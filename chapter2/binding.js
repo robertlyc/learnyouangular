@@ -1,6 +1,7 @@
-var messages = {};
-messages.someText = "You have started your journey."
+var myAppModule = angular.module('myApp', []);
 
-function TextController ($scope) {
-  $scope.messages = messages;
-}
+myAppModule.controller('TextController', function($scope) {
+  var someText = {};
+  someText.message = "You have started your journey.";
+  $scope.someText = someText;
+});
