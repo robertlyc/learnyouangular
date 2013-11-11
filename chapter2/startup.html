@@ -5,9 +5,11 @@
     <title>Startup</title>
   </head>
   <body>
-    <form ng-submit="requestFunding()" ng-controller="StartUpController">
+    <form ng-controller="StartUpController">
       Starting: <input ng-change="computeNeeded()" ng-model="funding.startingEstimate">
       Recommendation: {{ funding.needed }}
+      <button ng-click="requestFunding()">Fund me startup!</button>
+      <button ng-click="reset()">Reset</button>
     </form>
     <script src="http://cdn.staticfile.org/angular.js/1.1.5/angular.min.js"></script>
     <script src="startup.js"></script>
