@@ -1,4 +1,4 @@
-function StartUpController ($scope) {
+function StartUpController($scope) {
   $scope.funding = { startingEstimate: 0 };
   
   $scope.computeNeeded = function() {

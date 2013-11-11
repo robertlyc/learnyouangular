@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Student</title>
+  </head>
+  <body>
+    <div ng-controller="ListController">
+      <ul>
+        <li ng-repeat="student in students">
+          <a href="#">{{ student.name }}</a>
+        </li>
+      </ul>
+      <button ng-click="insert()">Insert</button>
+    </div>
+    <script src="http://cdn.staticfile.org/angular.js/1.1.5/angular.min.js"></script>
+    <script src="studentList.js"></script>
+  </body>
+</html>
+
