@@ -4,4 +4,10 @@ function DeathRayController($scope) {
   $scope.toggleMenu = function() {
     $scope.menuState.show = !$scope.menuState.show;
   }
+  
+  $scope.isDisabled = false;
+  $scope.stun = function() {
+    $scope.isDisabled = true;
+  }
+  
 }
