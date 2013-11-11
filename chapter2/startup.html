@@ -5,7 +5,7 @@
     <title>Startup</title>
   </head>
   <body>
-    <form ng-controller="StartUpController">
+    <form ng-submit="requestFunding()" ng-controller="StartUpController">
       Starting: <input ng-change="computeNeeded()" ng-model="funding.startingEstimate">
       Recommendation: {{ funding.needed }}
     </form>
