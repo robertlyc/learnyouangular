@@ -11,7 +11,7 @@ function CartController($scope) {
   //   $scope.items.splice(index, 1);
   // }
   
-  var calculateTotal = function () {
+  $scope.$watch(function() {
     var total = 0;
     for (var i = 0; i < $scope.items.length; i++ ) {
       total = total + $scope.items[i].price * $scope.items[i].quantity;
@@ -20,6 +20,5 @@ function CartController($scope) {
     $scope.bill.discount = total > 100 ? 10 : 0;
     $scope.bill.subtotal = total - $scope.bill.discount;
   }
-  
-  $scope.$watch('items', calculateTotal, true);
+  });
 }
