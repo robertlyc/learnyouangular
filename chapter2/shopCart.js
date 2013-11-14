@@ -19,6 +19,5 @@ function CartController($scope) {
     $scope.bill.total = total;
     $scope.bill.discount = total > 100 ? 10 : 0;
     $scope.bill.subtotal = total - $scope.bill.discount;
-  }
   });
 }
